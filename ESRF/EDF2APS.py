@@ -52,7 +52,7 @@ def generate_theta(num_data_files, arange):
     """
     angular_step = arange / num_data_files
     info(f"Angular step found: {angular_step}")
-    return np.array(np.linspace(0, arange, num=num_data_files, endpoint=False) * (np.pi / 180.0))
+    return np.array(np.linspace(0, arange, num=num_data_files, endpoint=False))# * (np.pi / 180.0))
 
 def get_data_radix(input_path):
     """
@@ -84,6 +84,7 @@ def saveh5(output_path, data, data_dark, data_white, angles):
         exchange_group.create_dataset('data', data=data)
         exchange_group.create_dataset('data_dark', data=data_dark)
         exchange_group.create_dataset('data_white', data=data_white)
+        exchange_group.create_dataset('theta', data=angles)
     info(f"Data saved to {output_path}")
 
 @click.command()
