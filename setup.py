@@ -14,7 +14,9 @@ setup(
             'tiff2zarr=DataTools.DataConversion.tiff2zarr:main',
             'esrf2aps=DataTools.ESRF.ESRF2APS:main',
             'edf2aps=DataTools.ESRF.EDF2APS:main',
-            'abscalc=DataTools.Physics.abscalc:main'  
+            'abscalc=DataTools.Physics.abscalc:main',
+            'create_vol=DataTools.Scripts.create_vol:main',
+            'extract_meta=DataTools.Scripts.extract_meta:main'     
         ],
     },
     classifiers=[

@@ -54,6 +54,8 @@ def process_hdf5(file_path):
     # Print a message indicating the output file has been saved
     print(f"Output saved to {output_path}")
 
-if __name__ == '__main__':
+def main():
     process_hdf5()
+if __name__ == '__main__':
+    main()
 
