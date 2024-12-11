@@ -2,7 +2,7 @@ import h5py
 import numpy as np
 import os
 import click
-from log import setup_custom_logger, info, error, warning, debug
+from .log import setup_custom_logger, info, error, warning, debug
 
 def data_scope(assigned_title):
     """

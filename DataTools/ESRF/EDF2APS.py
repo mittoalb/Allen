@@ -3,7 +3,7 @@ import h5py
 import click
 import fabio
 import numpy as np
-from log import setup_custom_logger, info, error, warning, debug
+from .log import setup_custom_logger, info, error, warning, debug
 
 setup_custom_logger()
 
@@ -113,7 +113,10 @@ def convert_edf_to_hdf5(input_path, output_path, arange, numberofdark):
     info(f"Number of angles generated: {len(angles)}")
 
     saveh5(output_path, data, data_dark, data_white, angles)
+    
+def main():
+    convert_edf_to_hdf5()
 
 if __name__ == '__main__':
-    convert_edf_to_hdf5()
+    main()
 

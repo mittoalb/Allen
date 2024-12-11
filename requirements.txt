@@ -1,0 +1,6 @@
+fabio
+click
+zarr
+numcodecs
+h5py
+xraylib

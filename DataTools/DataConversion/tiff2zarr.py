@@ -5,8 +5,8 @@ import zarr
 import click
 import json
 from numcodecs import Blosc
-from utils import calculate_global_min_max, load_tiff_chunked, downsample, minmaxHisto
-from log import info, setup_custom_logger
+from .utils import calculate_global_min_max, load_tiff_chunked, downsample, minmaxHisto
+from .log import info, setup_custom_logger
 
 def save_zarr(volume, output_path, chunks, compression, pixel_size, mode='w', original_dtype=np.uint8):
     """
